@@ -1,0 +1,20 @@
+<div id="<%= dom_id client %>">
+  <tr>
+    <th scope="row"><%= client.id %></th>
+    <td><%= client.name %></td>
+    <td><%= client.age %></td>
+    <td><% if client.movies.present? %>
+            <%= "Yes" %>
+          <% else %>
+            <%= "No" %>
+          <% end %>
+        </td>
+    <td><% client.movies.each do |movie| %>
+          <li style="text-decoration: none;"><%= movie.name %></li>
+        <% end %>
+    </td>
+    <td><%= link_to "Show this client", client,style:"text-decoration: none;text-transform: none;text-align:end;font-size: 15px;color:#043c4b ;font-family:'Raleway',sans serif;font-weight:bold" %></td>
+    <td><%= link_to "Edit this client", edit_client_path(client),style:"text-decoration: none;text-transform: none;text-align:end;font-size: 15px;color:#043c4b ;font-family:'Raleway',sans serif;font-weight:bold" %></td>
+    <td><%= button_to "Destroy this client",client , method: :delete,data: { turbo_confirm: "¿Estás seguro de que deseas eliminar este usuario?" },style:"text-decoration: none;text-transform: none;text-align:end;font-size: 15px;color:#f4ede6  ;font-family:'Raleway',sans serif;font-weight:bold;background-color:red;border-radius:10px" %></td>
+  </tr>
+</div>

@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9"><h1  style="text-align:start;padding: 5px;font-size: 30px;color:#f4ede6  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Clients</h1></div>
+    <div class="col-md-3"><%= link_to "New client", new_client_path , style:"text-decoration: none;text-transform: none;font-weight:bold;text-align:start;padding: 5px;font-size: 20px;color:#f7d547 ;font-family:'Raleway',sans serif;vertical-align: text-top;"%></div>
+  </div>
+  
+  <div id="clients" >
+    <table style="box-shadow: 2px 2px 10px #f7d547;background-color:#f4ede6;" class="table">
+      <thead>
+        <tr>
+          <th scope="col" style="text-align:start;font-size: 25px;color:#f7d547 ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;"></th>
+          <th scope="col"style="text-align:start;font-size: 25px;color:#f7d547 ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Name</th>
+          <th scope="col" style="text-align:start;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Age</th>
+          <th scope="col"style="text-align:start;font-size: 25px;color:#f7d547 ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Rent movie</th>
+          <th scope="col" style="text-align:start;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Movies</th>
+          <th scope="col" colspan="3"style="text-align:start;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @clients.each do |client| %>
+          <%= render client %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

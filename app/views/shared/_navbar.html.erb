@@ -1,0 +1,17 @@
+<nav class="navbar sticky-top navbar-expand-lg" style="background-color: #043c4b !important;">
+  <div class="container-fluid">
+    <%= link_to 'BlockBuster', root_path, class: 'navbar-brand',style:"font-weight:bold;font-size: 30px;font-family:'Pacifico',sans serif;color:#f7d547 ;" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align:end" >
+        <li  >
+          <%= link_to 'Clients', clients_path, style:"text-decoration: none;text-transform: none;text-align:end;padding: 5px;font-size: 30px;color:#f4ede6 ;font-family:'Raleway',sans serif;margin:15px"%>
+        </li>
+        <li >
+          <%= link_to 'Movies', movies_path,  style:"text-decoration: none;text-transform: none;text-align:end;padding: 5px;font-size: 30px;color:#f4ede6  ;font-family:'Raleway',sans serif;margin:15px" %>
+        </li>
+    </div>
+  </div>
+</nav>

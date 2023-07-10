@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+  <%= render @movie %>
+
+  <div class="row text-center">
+    <div class="col-md-4">
+      <%= link_to "Edit this movie", edit_movie_path(@movie) ,style:"font-weight:bold;text-decoration: none;text-transform: none;border-radius:15px;color:#f4ede6 ;margin:5px;background-color: #043c4b !important; padding:6px;font-size:20px"%>
+      <span style="font-size: 20px;color:#f4ede6 ;margin:10px">  |  </span>
+      <%= link_to "Back to movies", movies_path,style:"font-weight:bold;text-decoration: none;text-transform: none;border-radius:15px;color:#f4ede6 ;margin:5px;background-color: #043c4b !important; padding:6px;font-size:20px" %>
+    </div>
+    <div class="col-md-3">
+      <%= button_to "Destroy this movie", @movie, method: :delete,style:"text-decoration: none;text-transform: none;text-align:end;font-size: 15px;color:#f4ede6  ;font-family:'Raleway',sans serif;font-weight:bold;background-color:red;border-radius:10px" %>
+    </div>
+  </div>
+

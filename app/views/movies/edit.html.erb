@@ -1,0 +1,11 @@
+<h1 style="text-align:center;padding: 5px;font-size: 30px;color:#f4ede6  ;font-family:'Raleway',sans serif;" >Editing movie</h1>
+
+<%= render "form", movie: @movie %>
+
+<br>
+
+<div>
+  <%= link_to "Show this movie", @movie ,style:"font-weight:bold;text-decoration: none;text-transform: none;border-radius:15px;color:#f4ede6 ;margin:5px;background-color: #043c4b !important; padding:6px;font-size:20px"%> 
+  <span style="font-size: 20px;color:#f4ede6 ;margin:10px">  |  </span>
+  <%= link_to "Back to movies", movies_path ,style:"font-weight:bold;text-decoration: none;text-transform: none;border-radius:15px;color:#f4ede6 ;margin:5px;background-color: #043c4b !important; padding:6px;font-size:20px"%>
+</div>

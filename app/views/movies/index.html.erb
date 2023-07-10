@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-9"><h1 style="text-align:start;padding: 5px;font-size: 30px;color:#f4ede6  ;font-family:'Raleway',sans serif;">Movies</h1></div>
+    <div class="col-md-3"><%= link_to "New movie", new_movie_path, style:"text-decoration: none;text-transform: none;font-weight:bold;text-align:start;padding: 5px;font-size: 20px;color:#f7d547 ;font-family:'Raleway',sans serif;vertical-align: text-top;" %></div>
+  </div>
+  <div id="movies">
+    <div class="row">
+      <table class="col-md-4 m-3">
+          <tr>
+            <% @movies.each do |movie| %>
+              <%= render movie %>
+            <% end %>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>

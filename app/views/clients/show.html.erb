@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+<table class="table text-center " >
+  <thead>
+    <tr>
+      <th scope="col" style="text-align:center;font-size: 25px;color:#f7d547 ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;"></th>
+      <th scope="col"style="text-align:center;font-size: 25px;color:#f7d547 ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Name</th>
+      <th scope="col" style="text-align:center;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Age</th>
+      <th scope="col" style="text-align:center;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Rent movies</th>
+      <th scope="col" colspan="5" style="text-align:center;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @client %>
+  </tbody>
+</table>
+<div>
+  <%= link_to "Edit this client", edit_client_path(@client),style:"text-decoration: none;text-transform: none;text-align:end;font-size: 15px;color:#043c4b ;font-family:'Raleway',sans serif;font-weight:bold" %> 
+  <%= link_to "Back to clients", clients_path,style:"text-decoration: none;text-transform: none;text-align:end;font-size: 15px;color:#043c4b ;font-family:'Raleway',sans serif;font-weight:bold" %>
+</div>
