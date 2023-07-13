@@ -15,6 +15,7 @@
     <tr>
       <th scope="col"style="text-align:center;font-size: 25px;color:#f7d547 ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;"><%= form.label :name %></th>
       <th scope="col" style="text-align:center;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;"> <%= form.label :age %></th>
+      <th scope="col" style="text-align:center;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;"> <%= form.label :name %></th>
       <th scope="col" colspan="3" style="text-align:center;font-size: 25px;color:#f7d547  ;font-family:'Raleway',sans serif;font-weight:bold;vertical-align: text-top;">Action</th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
     <tr>
       <td><%= form.text_field :name %></td>
       <td><%= form.text_field :age %></td>
+      <td><%= form.select :name, options_for_select(@movies) %></td>
       <td ><%= form.submit "Validate",style:"font-weight:bold;background-color: #043c4b;border-radius:15px;color:#f4ede6 ;margin:5px;padding:5px" %></td>
     </tr>
   </tbody>

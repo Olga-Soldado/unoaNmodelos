@@ -23,7 +23,7 @@ class ClientsController < ApplicationController
   # POST /clients or /clients.json
   def create
     @client = Client.new(client_params)
-
+    @client.movies << Movies.find(params[:name])
     respond_to do |format|
       if @client.save
         format.html { redirect_to client_url(@client), notice: "Client was successfully created." }
@@ -68,6 +68,6 @@ class ClientsController < ApplicationController
     end
     # Only allow a list of trusted parameters through.
     def client_params
-      params.require(:client).permit(:name, :age ,:id)
+      params.require(:client).permit(:name, :age ,:id,{name:[]})
     end
 end
